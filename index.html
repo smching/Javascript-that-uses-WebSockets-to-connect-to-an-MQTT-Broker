@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> MQTT over WebSockets Demo</title>
+		<script type="text/javascript" src="mqttws31.js"></script>
+		<script type="text/javascript" src="myscripts.js"></script>
+	</head>
+	
+	<body onload="autorun()">
+		<div>
+			Broker <input type="text" id="wsBroker" size="13"><br>
+			Port <input type="number" id="wsPort" style="width: 4em">	
+			Qos <input type="number" id="qos" style="width: 2em"><br>
+			ClientID <input type="text" id="wsClientID" size="11"><br>
+			Topic <input type="text" id="wsTopic" size="14"><br>
+		</div>
+
+		<button onclick="doConnect()">Connect</button>
+		<button onclick="subscribe()">Subscribe</button>
+		<button onclick="publish()">Publish</button>
+		<button onclick="unsubscribe()">Unsubscribe</button>
+		<button onclick="disconnect()">Disconnect</button>
+		<br>				<br>
+		<textarea rows="8" cols="18" id="msgSend" placeholder="Write your message here"></textarea> 		
+		<textarea rows="8" cols="30" id="msgReceived" placeholder="Received message"></textarea><br>
+		<textarea rows="8" cols="51" id="logs" placeholder="Logs"></textarea><br>	
+
+	</body>
+</html>
